@@ -1,3 +1,3 @@
 # HashMap and Binary Search Tree BridgeLabz
-## Version UC1
-#### Ability to find frequency of word
+## Version UC2
+#### Implementing hashCode concept in HashMap, find frequency of word from a large paragraph
