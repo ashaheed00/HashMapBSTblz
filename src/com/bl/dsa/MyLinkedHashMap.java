@@ -48,6 +48,23 @@ public class MyLinkedHashMap<K, V> {
 		}
 	}
 
+	/* Ability to delete a specific key */
+	public void deleteKey(K key) {
+		int arrayIndex = this.getArrayIndex(key);
+		MyLinkedList<K> myLinkedList = this.hashArray.get(arrayIndex);
+		if (myLinkedList == null) {
+			System.out.println("Word not present");
+		} else {
+			MyMapNode<K, V> myMapNode = (MyMapNode<K, V>) myLinkedList.search(key);
+			if (myMapNode == null)
+				System.out.println("Word is not present");
+			else {
+				myLinkedList.delete(key);
+				System.out.println("Word deleted successfully");
+			}
+		}
+	}
+
 	@Override
 	public String toString() {
 		return "MyLinkedHashMap => " + hashArray;
